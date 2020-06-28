@@ -95,7 +95,7 @@ class App extends Component{
         }}>提交</button>
          getTransaction:
         <button onClick={()=>{
-            this.state.web3.eth.getTransaction('0x62281ec1012a45922067466919a580045e407565b138c45e155b386575e03667')
+          this.state.web3.eth.getTransaction('0x62281ec1012a45922067466919a580045e407565b138c45e155b386575e03667')
           .then(console.log);
         }}>提交</button>
         发送交易：
@@ -108,6 +108,10 @@ class App extends Component{
         .then(function(receipt){
             console.log(receipt)
         });
+        }}>提交</button>
+        获取所有账户：
+        <button onClick={()=>{
+          this.state.web3.eth.getAccounts().then(console.log);
         }}>提交</button>
     </div>)
   }
