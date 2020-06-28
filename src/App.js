@@ -98,6 +98,17 @@ class App extends Component{
             this.state.web3.eth.getTransaction('0x62281ec1012a45922067466919a580045e407565b138c45e155b386575e03667')
           .then(console.log);
         }}>提交</button>
+        发送交易：
+        <button onClick={()=>{
+          this.state.web3.eth.sendTransaction({
+            from: '0xF35CE50D9cFe4434B890e5Ef82fE2f6e1b11f0bE',
+            to: '0xdcF3Ff0B1203156Dd85EE7491f531B304186819C',
+            value: '1000000000000000'
+        })
+        .then(function(receipt){
+            console.log(receipt)
+        });
+        }}>提交</button>
     </div>)
   }
 }
